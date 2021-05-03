@@ -1,0 +1,47 @@
+name: BeastBrawl
+version: 1.0
+description: shit plugin
+main: pw.forseeable.beastbrawl.BeastBrawl
+author: Incrementing, Forseeable
+
+commands:
+  admin:
+    description: admin command
+  teleport:
+    description: teleport command
+    aliases: [tp,teleport,goto,to]
+  edit:
+    description: edit command
+    aliases: [gmc,gamemode,gma,gm,changemap]
+  kit:
+    description: kit command
+  suicide:
+    aliases: [suicide,kill,die,death]
+    description: suicide command
+  coins:
+    description: coins command
+  balance:
+    description: balance command
+    aliases: [bal,balance,amount]
+  toggle:
+    description: toggle command
+    aliases: [t]
+
+permissions:
+  bb.*:
+    description: All perms
+    children:
+      bb.admin: true
+      bb.kit.snake: true
+      bb.kit.parrot: true
+  bb.admin:
+    description: Admin perms
+  bb.kit.*:
+     description: All kit perms
+     children:
+       bb.kit.snake: true
+       bb.kit.parrot: true
+  bb.kit.snake:
+     description: Snake kit perms
+  bb.kit.parrot:
+     description: Parrot kit perms
